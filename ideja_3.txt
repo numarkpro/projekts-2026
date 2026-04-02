@@ -1,17 +1,20 @@
 Kāds varētu būt projekta nosaukums?
-
+TaskNinja Bot
 
 Ko projekts dara vienā teikumā?
-
+Personīgais digitālais asistents, kas palīdz fiksēt mājasdarbus un projektus, sakārtojot tos pēc termiņiem.
 
 Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)
-
+Produktivitātes rīks. Skolēni bieži aizmirst uzdevumus, kas nav ierakstīti e-klasē, vai atliek lielo projektu pildīšanu uz pēdējo nakti. Citās lietotnēs (piem., Todoist) ir pārāk daudz lieku funkciju.
 
 Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)
-
+Skolēni, studenti un jebkurš, kam nepieciešams vienkāršs rīks ikdienas uzdevumu plānošanai.
 
 Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?
-
+Caur Telegram saraksti. Rakstot komandas, piemēram, /add, /list, /done.
 
 Kādas ir 3–5 galvenās funkcijas (must-have)?
-
+Jauna uzdevuma pievienošana ar konkrētu datumu (piem., "Fizikas prezentācija 15.04").
+Uzdevumu saraksta izvadīšana, sakārtota pēc tuvākā termiņa (Datu struktūras kārtošana sarakstos/vārdnīcās).
+Uzdevuma atzīmēšana kā "Pabeigts", kas to izdzēš no aktīvās datubāzes (SQLite datu atjaunināšana).
+Datuma validācija – bots pārbauda, vai ievadītais datuma formāts ir pareizs (piemēram, neļauj ievadīt "32. decembri") un vai ievades teksts nav pārāk īss.
