@@ -1,17 +1,19 @@
 Kāds varētu būt projekta nosaukums?
-
+PocketManager
 
 Ko projekts dara vienā teikumā?
-
+Vienkārša finanšu uzskaites programma, kur lietotājs reģistrē savus ienākumus (kabatas naudu, ienākumus no projektiem) un izdevumus, sadalot tos pa kategorijām.
 
 Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)
-
+Skolēniem un jaunajiem uzņēmējiem bieži trūkst rīku, lai saprastu, kur pazūd viņu nauda un kā iekrāt konkrētam mērķim. Banku aplikācijas bieži neļauj elastīgi veidot savas kategorijas.
 
 Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)
-
+Jaunieši, studenti un cilvēki, kas sper pirmos soļus uzņēmējdarbībā.
 
 Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?
-
+konsolē
 
 Kādas ir 3–5 galvenās funkcijas (must-have)?
-
+SQLite datubāze / JSON: Glabā visus ienākumu un izdevumu ierakstus (datums, summa, kategorija).
+PIP Bibliotēka: Izmanto matplotlib (ja gribas uznirstošu logu ar pīrāga diagrammu par izdevumiem) vai plotext (lai uzzīmētu grafiku tieši konsolē).
+Kļūdu apstrāde un validācija: Pārbauda, vai ievadītā summa ir derīgs skaitlis (float), un bloķē negatīvu skaitļu ievadi tur, kur tas nav loģiski.
