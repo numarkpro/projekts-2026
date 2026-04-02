@@ -1,17 +1,19 @@
 Kāds varētu būt projekta nosaukums?
-
+BrainBoost Quizzer
 
 Ko projekts dara vienā teikumā?
-
+Interaktīva mācību programma, kas ļauj lietotājam izveidot jautājumu/atbilžu kartītes (piemēram, fizikas formulām vai angļu valodas vārdiņiem) un pārbauda zināšanas, saglabājot progresu.
 
 Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)
-
+Gatavošanās kontroldarbiem vai eksāmeniem ir vienmuļa. Grūti izsekot līdzi tam, kuras formulas vai vārdiņi jau ir iemācīti, bet kuri vēl jāatkārto.
 
 Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)
-
+Jebkura vecuma skolēni un studenti, kas gatavojas pārbaudījumiem.
 
 Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?
-
+konsolē
 
 Kādas ir 3–5 galvenās funkcijas (must-have)?
-
+Glabā jautājumu un atbilžu sarakstus, kā arī statistiku
+Izmanto colorama krāsainam tekstam konsolē (zaļš pareizām atbildēm, sarkans kļūdām).
+Pārbauda ievades garumu (nevar būt tukša atbilde) un apstrādā gadījumus, ja datubāze ir tukša un tajā vēl nav pievienoti jautājumi.
