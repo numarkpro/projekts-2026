@@ -18,3 +18,15 @@ Jauna uzdevuma pievienošana ar konkrētu datumu (piem., "Fizikas prezentācija 
 Uzdevumu saraksta izvadīšana, sakārtota pēc tuvākā termiņa (Datu struktūras kārtošana sarakstos/vārdnīcās).
 Uzdevuma atzīmēšana kā "Pabeigts", kas to izdzēš no aktīvās datubāzes (SQLite datu atjaunināšana).
 Datuma validācija – bots pārbauda, vai ievadītais datuma formāts ir pareizs (piemēram, neļauj ievadīt "32. decembri") un vai ievades teksts nav pārāk īss.
+
+5 funkcionālās prasības
+1. Lietotājs var pievienot jaunu uzdevumu, ievadot uzdevuma nosaukumu un termiņu, kas tiek saglabāts SQLite datubāzē.
+2. Lietotājs var skatīt savu uzdevumu sarakstu, sakārtotu pēc tuvākā termiņa, un redzēt, kuri uzdevumi ir aktīvi un kuri pabeigti.
+3. Lietotājs var atzīmēt uzdevumu kā "Pabeigts", kas to izdzēš no aktīvās datubāzes un pārvieto uz arhīvu.
+4. Bots pārbauda, vai ievadītais datuma formāts ir pareizs un vai ievades teksts nav pārāk īss, pirms pievieno uzdevumu datubāzei.
+5. Lietotājs var saņemt atgādinājumu par tuvojošos termiņu, piemēram, dienu pirms uzdevuma termiņa.
+
+3 nefunkcionālās prasības
+1. Botam jābūt pieejamam 24/7, lai lietotāji varētu pievienot un pārskatīt savus uzdevumus jebkurā laikā.
+2. Botam jābūt ātram un responsīvam, lai nodrošinātu labu lietotāja pieredzi, pat ar lielu uzdevumu skaitu.
+3. Datu glabāšanai jābūt drošai, lai aizsargātu lietotāju informāciju un nodrošinātu datu integritāti.

@@ -17,3 +17,15 @@ Kādas ir 3–5 galvenās funkcijas (must-have)?
 SQLite datubāze / JSON: Glabā visus ienākumu un izdevumu ierakstus (datums, summa, kategorija).
 PIP Bibliotēka: Izmanto matplotlib (ja gribas uznirstošu logu ar pīrāga diagrammu par izdevumiem) vai plotext (lai uzzīmētu grafiku tieši konsolē).
 Kļūdu apstrāde un validācija: Pārbauda, vai ievadītā summa ir derīgs skaitlis (float), un bloķē negatīvu skaitļu ievadi tur, kur tas nav loģiski.
+
+5 funkcionālās prasības
+1. Lietotājs var pievienot jaunu ierakstu, ievadot datumu, summu un kategoriju, kas tiek saglabāts SQLite datubāzē vai JSON failā.
+2. Lietotājs var skatīt savus ienākumus un izdevumus, sadalot tos pa kategorijām, un redzēt kopējo bilanci.
+3. Lietotājs var redzēt grafiku, kas parāda izdevumu sadalījumu pa kategorijām, izmantojot matplotlib vai plotext.
+4. Programma pārbauda, vai ievadītā summa ir derīgs skaitlis (float), un bloķē negatīvu skaitļu ievadi tur, kur tas nav loģiski.
+5. Lietotājs var redzēt kopsavilkumu par saviem finanšu datiem, piemēram, kopējo ienākumu, kopējo izdevumu un bilanci.
+
+3 nefunkcionālās prasības
+1. Programmai jābūt viegli lietojamai, ar intuitīvu saskarni, lai lietotāji varētu ātri pievienot un pārskatīt savus finanšu datus.
+2. Programmai jābūt ātrai un responsīvai, lai nodrošinātu labu lietotāja pieredzi, pat ar lielu datu apjomu.
+3. Datu glabāšanai jābūt drošai, lai aizsargātu lietotāju finanšu informāciju un nodrošinātu datu integritāti.
