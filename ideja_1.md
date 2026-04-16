@@ -60,7 +60,8 @@ Ekscelenti! Ir jasnas funkcijas, prasības, target audience, un risinājums ir k
 
 Priekšrocības: 
 - Daudz gatavas vārdnīcas 
-- var padalīties ar citiem 
+- var padalīties ar citiem
+
 Trūkumi: 
 - obligata registrešana 
 - ir vardnicu skaitu ierobežojums ar bezmaksas versiju 
@@ -73,6 +74,7 @@ Trūkumi:
 Priekšrocības: 
 - Daudz gatavas vārdnīcas 
 - var padalīties ar citiem 
+
 Trūkumi: 
 - obligata registrešana 
 - ir vardnicu skaitu ierobežojums ar bezmaksas versiju 
