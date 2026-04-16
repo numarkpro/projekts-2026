@@ -55,7 +55,7 @@ Ekscelenti! Ir jasnas funkcijas, prasības, target audience, un risinājums ir k
 #### Quizlet
 
 <picture>
-    <img alt="3x-ui" src="./msedge_bFBdGZ6R4M.png">
+    <img alt="3x-ui" src="./images/msedge_bFBdGZ6R4M.png">
 </picture>
 
 Priekšrocības: 
@@ -69,7 +69,7 @@ Trūkumi:
 #### Knowt
 
 <picture>
-    <img alt="3x-ui" src="./msedge_a5P3SaT07Z.png">
+    <img alt="3x-ui" src="./images/msedge_a5P3SaT07Z.png">
 </picture>
 
 Priekšrocības: 
