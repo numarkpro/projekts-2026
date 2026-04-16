@@ -1,3 +1,5 @@
+# LingoQuiz Bot
+
 Kāds varētu būt projekta nosaukums?\
 LingoQuiz Bot
 
