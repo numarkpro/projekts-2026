@@ -51,15 +51,29 @@ Ekscelenti! Ir jasnas funkcijas, prasības, target audience, un risinājums ir k
 
 
 ### Līdzīgi esoši risinājumi:
-Quizlet
+
+#### Quizlet
 
 <picture>
     <img alt="3x-ui" src="./msedge_bFBdGZ6R4M.png">
 </picture>
 
-Priekšrocības: \
-- Daudz gatavas vārdnīcas \
-- var padalīties ar citiem \
-Trūkumi: \
-- obligata registrešana \
+Priekšrocības: 
+- Daudz gatavas vārdnīcas 
+- var padalīties ar citiem 
+Trūkumi: 
+- obligata registrešana 
 - ir vardnicu skaitu ierobežojums ar bezmaksas versiju 
+
+#### Knowt
+
+<picture>
+    <img alt="3x-ui" src="./msedge_a5P3SaT07Z.png">
+</picture>
+Priekšrocības: 
+- Daudz gatavas vārdnīcas 
+- var padalīties ar citiem 
+Trūkumi: 
+- obligata registrešana 
+- ir vardnicu skaitu ierobežojums ar bezmaksas versiju 
+- tikai skolotaji var izveidot vardnicu
