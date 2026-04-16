@@ -1,4 +1,4 @@
-Kāds varētu būt projekta nosaukums?
+- Kāds varētu būt projekta nosaukums?
 LingoQuiz Bot
 
 Ko projekts dara vienā teikumā?
