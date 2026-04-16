@@ -45,3 +45,7 @@ Ekscelenti! Ir jasnas funkcijas, prasības, target audience, un risinājums ir k
 
 Demonstrējamība klasei?	5	
 Ļoti labi demonstrējams! Varat tiešraides laikā iepazīstināt klasi ar botu, parādīt vārdu pievienošanu, palaist testa režīmu un rādīt statistiku.
+
+
+Līdzīgi esoši risinājumi:
+Quizlet
