@@ -71,6 +71,7 @@ Trūkumi:
 <picture>
     <img alt="3x-ui" src="./msedge_a5P3SaT07Z.png">
 </picture>
+
 Priekšrocības: 
 - Daudz gatavas vārdnīcas 
 - var padalīties ar citiem 
