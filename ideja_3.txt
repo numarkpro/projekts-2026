@@ -30,3 +30,13 @@ Datuma validācija – bots pārbauda, vai ievadītais datuma formāts ir pareiz
 1. Botam jābūt pieejamam 24/7, lai lietotāji varētu pievienot un pārskatīt savus uzdevumus jebkurā laikā.
 2. Botam jābūt ātram un responsīvam, lai nodrošinātu labu lietotāja pieredzi, pat ar lielu uzdevumu skaitu.
 3. Datu glabāšanai jābūt drošai, lai aizsargātu lietotāju informāciju un nodrošinātu datu integritāti.
+
+Cik ļoti mani aizrauj šī tēma? 3
+
+Cik viegli ideja ir realizējama atbilstoši manam pašreizējam zināšanu līmenim? (1 — grūti, 5 — viegli) 5
+
+Vai šī programma atrisina kādu reālu problēmu vai ir noderīga, saistoša ikdienā? 3
+
+Vai šī programma atbilst visiem vērtēšanas kritērijiem? 4
+
+Cik efektīgi un saprotami šo projektu varēs nodemonstrēt klasei un skolotājam? 4
