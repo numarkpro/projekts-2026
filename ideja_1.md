@@ -33,19 +33,20 @@ Telegram bots sūtīs ziņas ar pogām (Inline Keyboard). Pārbaudes laikā liet
 2. Botam jābūt ātram un responsīvam, lai nodrošinātu labu lietotāja pieredzi.
 3. Datu glabāšanai jābūt drošai, lai aizsargātu lietotāju informāciju un vārdnīcu.
 
-Vai mani aizrauj šī tēma?	3	
+### Ideju vertēšana
+- Vai mani aizrauj šī tēma?	3\ 
 Projekts ir skaidri orientēts uz izglītību un valodu apguvi - ļoti aktuāla tēma, kurā redzama praktiski noderīga risinājuma ideja.
 
-Cik viegli realizējama atbilstoši zināšanu līmenim?	4	
+- Cik viegli realizējama atbilstoši zināšanu līmenim? 4	\
 Telegram bot ar JSON datubāzi ir reālistiska grūtības pakāpe. Šeit ir jāizmanto Python (python-telegram-bot bibliotēka), JSON darbības un nejaušas izvēles (random), kas ir vidēja grūtības līmeņa uzdevumi.
 
-Vai atrisina reālu problēmu?	3	
+- Vai atrisina reālu problēmu?	3\
 Jā, skaidri atrisina reālu problēmu - vārdiņu pārbaudīšana ģeometriski bieži ir nespēka vieta studentiem, un jūsu rīks ļauj to vienkāršot un automatizēt.
 
-Atbilst vērtēšanas kritērijiem?	5	
+- Atbilst vērtēšanas kritērijiem?	5\
 Ekscelenti! Ir jasnas funkcijas, prasības, target audience, un risinājums ir konkrēts (Telegram bots, JSON, interaktīvas pārbaudes).
 
-Demonstrējamība klasei?	5	
+- Demonstrējamība klasei?	5\
 Ļoti labi demonstrējams! Varat tiešraides laikā iepazīstināt klasi ar botu, parādīt vārdu pievienošanu, palaist testa režīmu un rādīt statistiku.
 
 
