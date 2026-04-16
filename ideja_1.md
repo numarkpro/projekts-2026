@@ -1,7 +1,7 @@
-- Kāds varētu būt projekta nosaukums?
+- Kāds varētu būt projekta nosaukums?\
 LingoQuiz Bot
 
-Ko projekts dara vienā teikumā?
+- Ko projekts dara vienā teikumā?\
 Izglītojošs bots, kas ļauj lietotājam izveidot savu angļu valodas vārdiņu vārdnīcu un regulāri pārbauda zināšanas ar interaktīviem testiem.
 
 Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)
