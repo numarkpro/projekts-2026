@@ -29,3 +29,13 @@ Kļūdu apstrāde un validācija: Pārbauda, vai ievadītā summa ir derīgs ska
 1. Programmai jābūt viegli lietojamai, ar intuitīvu saskarni, lai lietotāji varētu ātri pievienot un pārskatīt savus finanšu datus.
 2. Programmai jābūt ātrai un responsīvai, lai nodrošinātu labu lietotāja pieredzi, pat ar lielu datu apjomu.
 3. Datu glabāšanai jābūt drošai, lai aizsargātu lietotāju finanšu informāciju un nodrošinātu datu integritāti.
+
+Cik ļoti mani aizrauj šī tēma? 3
+
+Cik viegli ideja ir realizējama atbilstoši manam pašreizējam zināšanu līmenim? (1 — grūti, 5 — viegli) 4 
+
+Vai šī programma atrisina kādu reālu problēmu vai ir noderīga, saistoša ikdienā? 3
+
+Vai šī programma atbilst visiem vērtēšanas kritērijiem? 4
+
+Cik efektīgi un saprotami šo projektu varēs nodemonstrēt klasei un skolotājam? 4
