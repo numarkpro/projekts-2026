@@ -1,20 +1,20 @@
-- Kāds varētu būt projekta nosaukums?\
+Kāds varētu būt projekta nosaukums?\
 LingoQuiz Bot
 
-- Ko projekts dara vienā teikumā?\
+Ko projekts dara vienā teikumā?\
 Izglītojošs bots, kas ļauj lietotājam izveidot savu angļu valodas vārdiņu vārdnīcu un regulāri pārbauda zināšanas ar interaktīviem testiem.
 
-- Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)\
+Kādu problēmu šis projekts risina? (Vai tas ir rīks produktivitātei, izklaidei, datu analīze vai kas cits?)\
 Rīks mācībām. Vārdiņu kalšana no burtnīcas ir garlaicīga. Eksistējošās lietotnes (Kahoots, Quizlet) bieži ir maksas vai prasa pāriet uz pārlūkprogrammu. Šeit viss notiek tieši čatā.
 
-- Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)
+Kas būs šī rīka galvenais lietotājs? (Piemēram, paši studenti, uzņēmēji, spēlētāji vai datu pētnieki)\
 Skolēni, kas apgūst svešvalodas, vai cilvēki, kuri vēlas atsvaidzināt zināšanas.
 
-- Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?
+Kā lietotājs mijiedarbosies ar programmu (konsolē, Telegram bots, vienkāršā GUI)?\
 Telegram bots sūtīs ziņas ar pogām (Inline Keyboard). Pārbaudes laikā lietotājam jāizvēlas pareizais tulkojums no variantiem.
 
-- Kādas ir 3–5 galvenās funkcijas (must-have)?
-[]Iespēja pievienot jaunu vārdu pāri (angļu - latviešu), kas tiek saglabāts JSON failā.
+Kādas ir 3–5 galvenās funkcijas (must-have)?\
+Iespēja pievienot jaunu vārdu pāri (angļu - latviešu), kas tiek saglabāts JSON failā.
 "Quiz" jeb pārbaudes režīms – bots nejaušā secībā izvēlas vārdus no vārdnīcas un piedāvā 4 atbilžu variantus.
 Lietotāja statistikas uzskaite (pareizo/nepareizo atbilžu procents), izmantojot klases (OOP) vai vārdnīcas struktūru.
 Pārbaude un kļūdu apstrāde – bots neļauj sākt testu, ja datubāzē nav pievienoti vismaz 4 vārdi, un neļauj ievadīt tukšus vārdus.
