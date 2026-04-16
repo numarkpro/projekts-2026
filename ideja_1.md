@@ -40,7 +40,7 @@ Projekts ir skaidri orientēts uz izglītību un valodu apguvi - ļoti aktuāla 
 - Cik viegli realizējama atbilstoši zināšanu līmenim? 4	\
 Telegram bot ar JSON datubāzi ir reālistiska grūtības pakāpe. Šeit ir jāizmanto Python (python-telegram-bot bibliotēka), JSON darbības un nejaušas izvēles (random), kas ir vidēja grūtības līmeņa uzdevumi.
 
-- Vai atrisina reālu problēmu?	3\
+- Vai atrisina reālu problēmu?	3 \
 Jā, skaidri atrisina reālu problēmu - vārdiņu pārbaudīšana ģeometriski bieži ir nespēka vieta studentiem, un jūsu rīks ļauj to vienkāršot un automatizēt.
 
 - Atbilst vērtēšanas kritērijiem?	5\
