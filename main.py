@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
+from waitress import serve
 import requests
 import time
 import json
@@ -9,12 +10,12 @@ app = Flask(__name__)
 CORS(app)
 
 STOPS_FILE = os.path.join(os.path.dirname(__file__), 'stops.json')
-API_URL    = "https://www.stops.lt/rigaapp/read.php"
+API_URL = "https://www.stops.lt/rigaapp/read.php"
 
 HEADERS = {
     "Origin-Custom": "stops.lt",
-    "Referer":       "https://stops.lt/",
-    "User-Agent":    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "Referer": "https://stops.lt/",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
 }
 
 def load_stops():
@@ -39,31 +40,31 @@ def parse_departures(raw_text):
             continue
 
         transport_type = parts[0]          # bus, trol, tram, train
-        route          = parts[1]
-        direction      = parts[2]
-        scheduled_sec  = int(parts[3])
-        realtime_sec   = int(parts[4])
-        destination    = parts[5]
+        route = parts[1]
+        direction = parts[2]
+        scheduled_sec = int(parts[3])
+        realtime_sec = int(parts[4])
+        destination = parts[5]
 
         sched_min = round((scheduled_sec - now_sec) / 60)
         if sched_min < -1:
             continue
 
         has_realtime = realtime_sec > 3600
-        real_min     = round((realtime_sec - now_sec) / 60) if has_realtime else None
-        delay_sec    = (realtime_sec - scheduled_sec) if has_realtime else None
-        delay_min    = round(delay_sec / 60) if delay_sec is not None and abs(delay_sec) < 1800 else None
+        real_min = round((realtime_sec - now_sec) / 60) if has_realtime else None
+        delay_sec = (realtime_sec - scheduled_sec) if has_realtime else None
+        delay_min = round(delay_sec / 60) if delay_sec is not None and abs(delay_sec) < 1800 else None
 
         departures.append({
-            "type":          transport_type,
-            "route":         route,
-            "direction":     direction,
-            "destination":   destination,
+            "type": transport_type,
+            "route": route,
+            "direction": direction,
+            "destination": destination,
             "scheduled_min": sched_min,
-            "realtime_min":  real_min,
-            "delay_min":     delay_min,
+            "realtime_min": real_min,
+            "delay_min": delay_min,
             "scheduled_sec": scheduled_sec,
-            "realtime_sec":  realtime_sec if has_realtime else None,
+            "realtime_sec": realtime_sec if has_realtime else None,
         })
 
     departures.sort(key=lambda x: x['scheduled_sec'])
@@ -72,7 +73,7 @@ def parse_departures(raw_text):
 def fetch_stop(stop_id):
     params = {
         "stopid": stop_id,
-        "time":   str(int(time.time() * 1000)),
+        "time": str(int(time.time() * 1000)),
     }
     try:
         resp = requests.get(API_URL, params=params, headers=HEADERS, timeout=5)
@@ -98,7 +99,7 @@ def get_departures(stop_id):
 
 @app.route('/api/all', methods=['GET'])
 def get_all():
-    stops  = load_stops()
+    stops = load_stops()
     result = []
     for stop in stops:
         if stop.get('id') is None:
@@ -108,8 +109,8 @@ def get_all():
         result.append({"stop": stop, "departures": departures})
     return jsonify({
         "timestamp": int(time.time()),
-        "now_sec":   seconds_from_midnight(),
-        "stops":     result,
+        "now_sec": seconds_from_midnight(),
+        "stops": result,
     })
 
 @app.route('/api/health', methods=['GET'])
@@ -118,4 +119,4 @@ def health():
 
 if __name__ == '__main__':
     print("Transit Board API → http://localhost:5000")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    serve(app, host='0.0.0.0', port=5000)
