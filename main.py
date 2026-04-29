@@ -27,11 +27,11 @@ def seconds_from_midnight():
     return now.tm_hour * 3600 + now.tm_min * 60 + now.tm_sec
 
 def parse_departures(raw_text):
-    lines   = raw_text.strip().split('\n')
+    lines = raw_text.strip().split('\n')
     now_sec = seconds_from_midnight()
     departures = []
 
-    for line in lines[1:]:
+    for line in lines[1:]: # 
         line = line.strip()
         if not line:
             continue
@@ -91,9 +91,9 @@ def get_stops():
 @app.route('/api/departures/<stop_id>', methods=['GET'])
 def get_departures(stop_id):
     return jsonify({
-        "stop_id":   stop_id,
+        "stop_id": stop_id,
         "timestamp": int(time.time()),
-        "now_sec":   seconds_from_midnight(),
+        "now_sec": seconds_from_midnight(),
         "departures": fetch_stop(stop_id),
     })
 
