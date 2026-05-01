@@ -1,5 +1,5 @@
 :root {
-  --bg: #0b1220;
+  --bg: #0a0c0f;
   --panel: #121a2b;
   --panel-2: #18233a;
   --border: #2a3a5b;
@@ -15,7 +15,7 @@
 body {
   margin: 0;
   font-family: Inter, Arial, sans-serif;
-  background: linear-gradient(180deg, #09111d 0%, #0b1220 100%);
+  background: var(--bg);
   color: var(--text);
 }
 .wrap {

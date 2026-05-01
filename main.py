@@ -43,17 +43,12 @@ def parse_departures(raw_text):
         route = parts[1]
         direction = parts[2]
         scheduled_sec = int(parts[3])
-        realtime_sec = int(parts[4])
+        transport_id = int(parts[4])
         destination = parts[5]
 
         sched_min = round((scheduled_sec - now_sec) / 60)
         if sched_min < -1:
             continue
-
-        has_realtime = realtime_sec > 3600
-        real_min = round((realtime_sec - now_sec) / 60) if has_realtime else None
-        delay_sec = (realtime_sec - scheduled_sec) if has_realtime else None
-        delay_min = round(delay_sec / 60) if delay_sec is not None and abs(delay_sec) < 1800 else None
 
         departures.append({
             "type": transport_type,
@@ -61,10 +56,8 @@ def parse_departures(raw_text):
             "direction": direction,
             "destination": destination,
             "scheduled_min": sched_min,
-            "realtime_min": real_min,
-            "delay_min": delay_min,
             "scheduled_sec": scheduled_sec,
-            "realtime_sec": realtime_sec if has_realtime else None,
+            "transport_id": transport_id,
         })
 
     departures.sort(key=lambda x: x['scheduled_sec'])
