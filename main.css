@@ -6,6 +6,7 @@
   --text: #f3f7ff;
   --muted: #8c9db9;
   --green: #28c76f;
+  --overdue: #727272;
   --yellow: #ffb020;
   --red: #ea5455;
   --empty: #1b263d;
@@ -183,8 +184,8 @@ h1 {
 .arrive    { color: var(--green); animation:blink 1.1s ease-in-out infinite; }
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.6}}
 .soon    { color: var(--yellow); }
-.late    { color: var(--text); }
-.overdue { color: var(--red); }
+.overdue { color: var(--overdue); }
+.normal    { color: var(--text); }
 .nodata, .error {
   padding: 20px;
   color: var(--muted);

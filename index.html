@@ -31,9 +31,14 @@
     let nextRefresh  = Date.now() + REFRESH_MS;
 
     const transportClass = t => ({ bus:'bus', trol:'trol', tram:'tram', train:'train' }[t] ?? 'other');
-    const transportLabel = t => ({ bus:`<span class="temaki--bus"></span>`,   trol:`<span class="temaki--trolleybus"></span>`,    tram:`<span class="temaki--tram"></span>`,   train:`<span class="temaki--train"></span>`   }[t] ?? '?');
-    const etaClass = m => m < 0 ? 'overdue' : m <= 1 ? 'arrive' : m <= 5 ? 'soon' : 'late';
-    const formatEta = m => m < 0 ? '0' : String(m);
+    const transportLabel = t => ({ bus:`<span class="temaki--bus"></span>`,   trol:`<span class="temaki--trolleybus"></span>`,    tram:`<span class="temaki--tram"></span>`  }[t] ?? '?');
+    const etaClass = m => m < 0 ? 'overdue' : m <= 1 ? 'arrive' : m <= 5 ? 'soon' : 'normal';
+    const formatEta = m => {
+        if (m < 0) return 'Aizbr';
+        if (m <= 0) return 'Pienāk';
+        if (m >= 60) return `${Math.floor(m/60)}h ${m%60}`;
+        return String(m);
+    };
 
     function updateClock() {
       document.getElementById('clock').textContent =
@@ -68,7 +73,7 @@
               </div>
               <div class="eta ${etaClass(dep.scheduled_min)}">
                 ${formatEta(dep.scheduled_min)}
-                <small>min</small>
+                ${dep.scheduled_min > 0 ? '<small>min</small>' : ''}
               </div>
             </div>`).join('')
         : '<div class="nodata">Nav reāllaika datu attiecībā uz šo pieturu.</div>';

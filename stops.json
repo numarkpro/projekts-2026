@@ -5,8 +5,6 @@
     { "id": "0155", "name": "Ikšķiles iela", "direction": "← no centra", "street": "Lokomotīves iela" },
     { "id": "0154", "name": "Ikšķiles iela", "direction": "→ uz centru", "street": "Lokomotīves iela" },
     { "id": "0201", "name": "Ikšķiles iela", "direction": "← no centra", "street": "Latgales iela" },
-    { "id": "0202", "name": "Ikšķiles iela", "direction": "→ uz centru", "street": "Latgales iela" },
-    { "id": "", "name": "Šķirotava", "direction": "uz centru", "street": "Lokomotīves iela" },
-    { "id": "", "name": "Šķirotava", "direction": "no centru", "street": "Lokomotīves iela" }
+    { "id": "0202", "name": "Ikšķiles iela", "direction": "→ uz centru", "street": "Latgales iela" }
   ]
 }
