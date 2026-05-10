@@ -18,9 +18,58 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
 }
 
+def validate_stop(stop):
+    # Pārbauda, vai ieraksts ir vārdnīca
+    if not isinstance(stop, dict):
+        return False
+
+    stop_id = stop.get('id')
+    name = stop.get('name')
+    direction = stop.get('direction')
+    street = stop.get('street')
+
+    # Pārbauda, vai ID ir četrciparu skaitlis
+    if not isinstance(stop_id, str) or len(stop_id) != 4 or not stop_id.isdigit():
+        return False
+    # Pārbauda, vai nosaukums ir derīgs teksts
+    if not isinstance(name, str) or not name.strip() or len(name) > 100:
+        return False
+    # Pārbauda, vai virziens ir derīgs teksts
+    if not isinstance(direction, str) or not direction.strip() or len(direction) > 100:
+        return False
+    # Pārbauda, vai iela ir derīgs teksts
+    if not isinstance(street, str) or not street.strip() or len(street) > 100:
+        return False
+
+    return True
+
+
 def load_stops():
-    with open(STOPS_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)['stops']
+    try:
+        with open(STOPS_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except FileNotFoundError as e:
+        print("JSON fails nav atrasts:", e)
+        return []
+    except json.JSONDecodeError as e:
+        print("JSON sintakses kļūda:", e)
+        return []
+
+    # Pārbauda, vai JSON satur pareizu struktūru
+    if not isinstance(data, dict) or 'stops' not in data or not isinstance(data['stops'], list):
+        print("JSON struktūras kļūda: lauks 'stops' nav derīgs")
+        return []
+
+    valid_stops = []
+    # Cikls pārbauda katru pieturas ierakstu no faila
+    for stop in data['stops']:
+        if validate_stop(stop):
+            valid_stops.append(stop)
+        else:
+            print("Nederīgs pieturas ieraksts:", stop)
+
+    return valid_stops
+
 
 def seconds_from_midnight():
     now = time.localtime()
@@ -31,11 +80,14 @@ def parse_departures(raw_text):
     now_sec = seconds_from_midnight()
     departures = []
 
-    for line in lines[1:]: # 
+    # Cikls pāriet cauri visām datu rindām pēc pirmās (galvenes)
+    for line in lines[1:]:
         line = line.strip()
+        # Ja rinda ir tukša, izlaist to
         if not line:
             continue
         parts = line.split(',')
+        # Ja dati nav pilnīgi, izlaist šo rindu
         if len(parts) < 6:
             continue
 
@@ -47,6 +99,7 @@ def parse_departures(raw_text):
         destination = parts[5]
 
         sched_min = round((scheduled_sec - now_sec) / 60)
+        # Ja izziņa ir jau noslēgusies vairāk nekā minūti atpakaļ, izlaist to
         if sched_min < -1:
             continue
 
@@ -94,7 +147,9 @@ def get_departures(stop_id):
 def get_all():
     stops = load_stops()
     result = []
+    # Cikls pārstrādā katru pieturu sarakstā
     for stop in stops:
+        # Ja pieturai nav ID, nevar iegūt reisus, tāpēc pievieno tukšu sarakstu
         if stop.get('id') is None:
             result.append({"stop": stop, "departures": []})
             continue
@@ -110,6 +165,7 @@ def get_all():
 def health():
     return jsonify({"status": "ok", "time": int(time.time())})
 
+# Ja skripts tiek palaists tieši, tad serveris tiek uzsākts
 if __name__ == '__main__':
     print("Transit Board API → http://localhost:5000")
     serve(app, host='0.0.0.0', port=5000)

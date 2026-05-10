@@ -1,28 +1,39 @@
-# Programmēšana 1, projekts 2026
+## Testa piemēri
 
-Projekts tiek īstenots patstāvīgi. Projekta tiek aizstavēts ar prezentāciju un demo.
-Kods tiek analizēts pēc aizstavēšanas.
+### Pozitīvais tests 1
+- Nosaukums: Derīga pietura validācijai
+- Priekšnosacījums: pieejams pieturas objekts ar `id="2091"`, `name="Ikšķiles iela"`, `direction="← no centra"`, `street="Prūšu iela"`
+- Testa (darbību) soļi:
+  1. izsaukt `validate_stop(stop)`
+- Paredzētie rezultāti:
+  - funkcija atgriež `True`
 
-## Analīze, projektēšana, plānošana (0.5pt) (prezentācija 3)
-- Analīze - Problēmas apraksts, kāpēc tā ir aktuāla
-- Analīze - Mērķauditorija, kura lietos programmu
-- Analīze - eksistējošo risinājumu analīze, ekrānšāviņi, plusi un mīnusi
-- Projektēšana - specifikācija, vismaz 5 funkcionālas un 5 nefunkcionālas prasības
-- Plānošana - darba uzdevumu saraksts, vismaz 5 uzdevumi
-- Risinājuma prezentācija - demo vai ekrānšāviņi
+### Pozitīvais tests 2
+- Nosaukums: Derīgs JSON ielādēšanai
+- Priekšnosacījums: stops.json satur derīgu JSON ar lauku `stops` kā sarakstu un vienu pareizu pieturas ierakstu
+- Testa (darbību) soļi:
+  1. ielādēt failu ar mock vai testfailu
+  2. izsaukt `load_stops()`
+- Paredzētie rezultāti:
+  - tiek atgriezts saraksts ar vienu pieturu
+  - pieturas objekts satur `id="2091"`
 
-## Izstrāde (0.5pt, kopā 4)
-- Kods atbilst izvirzītam prasībam
-- Mainīgie rakstīti snake_case, bez saisinājumiem
-- Ir komentāri pirms if, for, while kosntrukcijam
-- Kods nemet kļūdas darbības laikā
-- Izmaiņas saglabātas Github repozitorijā, vairākas iterācijās (vairāki commit)
-- Izmantoti saraksti vai vārdnīcas vai klases
-- Izmantota jebkura bibliotēka (modulis uzinstalēts ar PIP un izmantots kodā)  
-- Izmantoti JSON faili vai SQLite datubāze datu glabāšanai
+### Negatīvais tests 1
+- Nosaukums: Nederīgs pieturas ID validācijai
+- Priekšnosacījums: pieejams pieturas objekts ar `id="0202asd"` un pārējo lauku korektu saturu
+- Testa (darbību) soļi:
+  1. izsaukt `validate_stop(stop)`
+- Paredzētie rezultāti:
+  - funkcija atgriež `Nederīgs pieturas ieraksts: {'id': '0202asd', 'name': 'Ikšķiles iela', 'direction': '→ uz centru', 'street': 'Latgales iela'}`
 
-## Testēšana, atkļūdošana (0.5pt, kopā 3)
-- Ievaddatiem ir kļūdu apstrāde
-- Ir ievaddatu validācija (pārbaude ka tika ierakstīti korrekti dati, garuma/formāta/tipa pārbaude)
-- Testēšana - 2 pozitīvie testpiemēri
-- Testēšana - 2 negatīvie testpiemēri
+### Negatīvais tests 2
+- Nosaukums: Sintakses kļūda JSON ielādēšanā
+- Priekšnosacījums: stops.json vai mock dati satur nepareizu JSON, piemēram `{"stops": [invalid]}`
+- Testa (darbību) soļi:
+  1. ielādēt šo nepareizo JSON ar `load_stops()`
+- Paredzētie rezultāti:
+  - tiek atgriezts tukšs saraksts `[]`
+  - netiek izmests neapstrādāts izņēmums
+
+
+  
